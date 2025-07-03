@@ -29,14 +29,15 @@ export default function ProductCard({ product }: { product: Product }) {
     } else {
       updatedWishlist = [...wishlist, product.id];
       try {
-        await fetch("http://localhost/wishlist-api/add-to-wishlist.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            userId: 1,
-            productId: parseInt(product.id),
-          }),
-        });
+        await fetch("http://localhost/store-api/wishlist/add-to-wishlist.php", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    userId: 1,
+    productId: parseInt(product.id),
+  }),
+});
+
       } catch (error) {
         console.error("Failed to sync with backend:", error);
       }
@@ -50,7 +51,18 @@ export default function ProductCard({ product }: { product: Product }) {
 };
 
   // ✅ Add to cart logic
- const handleAddToCart = () => {
+  const handleAddToCart = async() => {
+    await fetch("http://localhost/store-api/cart/add-to-cart.php", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    userId: 1,
+    productId: parseInt(product.id),
+    quantity: 1,
+  }),
+});
+
+
   const existingCart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
 
   const itemIndex = existingCart.findIndex((item) => item.id === product.id);

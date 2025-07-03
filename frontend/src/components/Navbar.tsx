@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { JSX, useState } from "react";
 
-export default function Navbar() : JSX.Element{
+export default function Navbar(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,6 +18,9 @@ export default function Navbar() : JSX.Element{
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 text-sm font-medium">
+            <Link href="/" className="hover:text-purple-600">
+            Home</Link>
+
             <Link href="/products" className="hover:text-purple-600">
               Products
             </Link>
@@ -30,7 +33,6 @@ export default function Navbar() : JSX.Element{
             <Link href="/contact" className="hover:text-purple-600">
               Contact
             </Link>
-
           </nav>
 
           {/* Mobile menu button */}
@@ -44,7 +46,10 @@ export default function Navbar() : JSX.Element{
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden flex flex-col space-y-2 py-2">
+          <div className="md:hidden flex flex-col space-y-2 py-2 text-sm font-medium">
+            <Link href="/" className="hover:text-purple-600">
+              Home
+            </Link>
             <Link href="/products" className="hover:text-purple-600">
               Products
             </Link>

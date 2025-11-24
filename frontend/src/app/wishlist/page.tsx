@@ -1,22 +1,56 @@
 "use client";
 import { useEffect, useState } from "react";
-import { products } from "@/constants/dummyData";
 import ProductCard from "@/components/ProductCard";
 import { TbShoppingCartHeart } from "react-icons/tb";
 
+type Product = {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  rating: number;
+};
+
 export default function WishlistPage() {
   const [wishlist, setWishlist] = useState<string[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost/backend";
 
   useEffect(() => {
+    // Load wishlist
     const stored = localStorage.getItem("wishlist");
     if (stored) {
       setWishlist(JSON.parse(stored));
     }
-  }, []);
+
+    // Fetch real products from backend
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`${backendUrl}/store-api/products/get-products.php`);
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, [backendUrl]);
 
   const filteredProducts = products.filter((product) =>
     wishlist.includes(product.id)
   );
+
+  if (loading) {
+    return (
+      <div className="text-center py-12">
+        <div className="text-lg text-gray-600">Loading...</div>
+      </div>
+    );
+  }
 
   if (filteredProducts.length === 0) {
     return (

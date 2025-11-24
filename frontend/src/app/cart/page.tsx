@@ -14,6 +14,23 @@ type CartItem = {
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost/backend";
+
+  // Function to clean and construct proper image URL
+  const getImageUrl = (imagePath: string) => {
+  // If it's missing the admin/uploads path, add it
+  if (imagePath.includes('http://localhost/backend/') && 
+      !imagePath.includes('/admin/uploads/')) {
+    const filename = imagePath.replace('http://localhost/backend/', '');
+    return `${backendUrl}/admin/uploads/${filename}`;
+  }
+  // If it's just a filename (no http), construct full URL
+  if (!imagePath.includes('http')) {
+    return `${backendUrl}/admin/uploads/${imagePath}`;
+  }
+  // If it's already a proper URL, use it as is
+  return imagePath;
+};
 
   const loadCart = () => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -74,7 +91,7 @@ export default function CartPage() {
           >
             <div className="flex gap-4 items-center">
               <Image
-                src={item.image}
+                src={getImageUrl(item.image)}
                 alt={item.name}
                 width={80}
                 height={80}
@@ -82,7 +99,7 @@ export default function CartPage() {
               />
               <div>
                 <p className="font-semibold">{item.name}</p>
-                <p className="text-sm text-gray-500">KES {item.price}</p>
+                <p className="text-sm text-gray-500">KES {item.price.toLocaleString('en-KE', { maximumFractionDigits: 0 })}</p>
               </div>
             </div>
             <div className="flex items-center gap-2">

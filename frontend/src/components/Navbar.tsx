@@ -3,6 +3,7 @@
 "use client";
 import Link from "next/link";
 import { JSX, useState } from "react";
+import { FaUserCircle } from "react-icons/fa"
 
 export default function Navbar(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ export default function Navbar(): JSX.Element {
           </Link>
 
           {/* Desktop Nav */}
+          
           <nav className="hidden md:flex space-x-8 text-sm font-medium">
             <Link href="/" className="hover:text-purple-600">
             Home</Link>
@@ -33,7 +35,10 @@ export default function Navbar(): JSX.Element {
             <Link href="/contact" className="hover:text-purple-600">
               Contact
             </Link>
-          </nav>
+            <Link href="/profile">
+          <FaUserCircle size={28} className="text-purple-800 hover:text-purple-600 transition-colors" />
+        </Link>
+           </nav>
 
           {/* Mobile menu button */}
           <button

@@ -104,75 +104,70 @@ function FeaturedCategories() {
             id: 1,
             name: "Luxury Necklaces",
             description: "Elegant pieces that make a statement",
-            icon: "💎",
-            bgGradient: "from-purple-50 to-pink-50",
-            circleGradient: "from-purple-400 to-pink-400",
-            textColor: "text-purple-800",
-            buttonColor: "bg-purple-600 hover:bg-purple-700",
-            buttonText: "Explore"
+            image: "/images/necklaces.jpg",
+            bgColor: "bg-[#EAD9CC]",
+            textColor: "text-[#4C3F39]",
+            buttonColor: "bg-[#B48F76] hover:bg-[#8C7468]"
         },
         {
             id: 2,
             name: "Charming Bracelets",
             description: "Delicate designs for everyday wear",
-            icon: "✨",
-            bgGradient: "from-blue-50 to-teal-50",
-            circleGradient: "from-blue-400 to-teal-400",
-            textColor: "text-blue-800",
-            buttonColor: "bg-blue-600 hover:bg-blue-700",
-            buttonText: "Explore"
+            image: "/images/bracelets.jpg",
+            bgColor: "bg-[#F7F3EF]",
+            textColor: "text-[#4C3F39]",
+            buttonColor: "bg-[#C1A08E] hover:bg-[#A68A7C]"
         },
         {
             id: 3,
             name: "Elegant Earrings",
             description: "Sparkling accents for every occasion",
-            icon: "🌟",
-            bgGradient: "from-pink-50 to-rose-50",
-            circleGradient: "from-pink-400 to-rose-400",
-            textColor: "text-pink-800",
-            buttonColor: "bg-pink-600 hover:bg-pink-700",
-            buttonText: "Explore"
+            image: "/images/earrings.jpg",
+            bgColor: "bg-[#D9B7A0]",
+            textColor: "text-[#4C3F39]",
+            buttonColor: "bg-[#B48F76] hover:bg-[#8C7468]"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-16 bg-white",
+        className: "py-16 bg-[#F7F3EF]",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto px-4",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "text-3xl font-bold text-center mb-4 text-purple-800",
+                    className: "text-3xl font-bold text-center mb-4 text-[#4C3F39]",
                     children: "Featured Collections"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/FeaturedCategories.tsx",
+                    lineNumber: 38,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-[#6A554A] text-center mb-12 max-w-2xl mx-auto",
+                    children: "Discover our handpicked selection of exquisite jewelry pieces crafted with precision and passion"
                 }, void 0, false, {
                     fileName: "[project]/src/components/FeaturedCategories.tsx",
                     lineNumber: 42,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-gray-600 text-center mb-12 max-w-2xl mx-auto",
-                    children: "Discover our handpicked selection of exquisite jewelry pieces crafted with precision and passion"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/FeaturedCategories.tsx",
-                    lineNumber: 45,
-                    columnNumber: 9
-                }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-1 md:grid-cols-3 gap-8",
                     children: categories.map((category)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `bg-gradient-to-br ${category.bgGradient} rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer`,
+                            className: `${category.bgColor} rounded-t-[90px] rounded-b-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer`,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: `w-32 h-32 bg-gradient-to-r ${category.circleGradient} rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-4xl",
-                                        children: category.icon
+                                    className: "w-full h-48 rounded-t-[80px] overflow-hidden mb-6",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: category.image,
+                                        alt: category.name,
+                                        className: "w-full h-full object-cover"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FeaturedCategories.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 57,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FeaturedCategories.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 56,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -180,45 +175,45 @@ function FeaturedCategories() {
                                     children: category.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FeaturedCategories.tsx",
-                                    lineNumber: 58,
+                                    lineNumber: 65,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-gray-600 mb-4",
+                                    className: "text-[#6A554A] mb-4",
                                     children: category.description
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FeaturedCategories.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: `${category.buttonColor} text-white px-6 py-2 rounded-full transition`,
-                                    children: category.buttonText
+                                    children: "Explore"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FeaturedCategories.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 73,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, category.id, true, {
                             fileName: "[project]/src/components/FeaturedCategories.tsx",
-                            lineNumber: 51,
+                            lineNumber: 50,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/FeaturedCategories.tsx",
-                    lineNumber: 49,
+                    lineNumber: 47,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/FeaturedCategories.tsx",
-            lineNumber: 41,
+            lineNumber: 36,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/FeaturedCategories.tsx",
-        lineNumber: 40,
+        lineNumber: 35,
         columnNumber: 5
     }, this);
 }
@@ -244,103 +239,121 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 function ArtBanner() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-16 bg-white",
+        className: "py-16 bg-[#F7F3EF]",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-7xl mx-auto px-4",
+            className: "w-full px-0",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col lg:flex-row items-center gap-12",
+                className: "relative bg-[#EAD9CC] rounded-2xl p-10 shadow-md border border-[#D9B7A0] overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "lg:w-1/2",
+                        className: "absolute right-8 top-1/2 -translate-y-1/2 hidden lg:block",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-full h-96 rounded-2xl shadow-lg overflow-hidden",
+                            className: "w-64 h-64 rounded-full overflow-hidden shadow-lg border-4 border-[#F7F3EF]",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 src: "/images/artbanner.jpeg",
                                 alt: "Elegant jewelry collection",
-                                width: 600,
+                                width: 400,
                                 height: 400,
                                 className: "w-full h-full object-cover",
                                 priority: true
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ArtBanner.tsx",
-                                lineNumber: 12,
+                                lineNumber: 14,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/ArtBanner.tsx",
-                            lineNumber: 11,
+                            lineNumber: 13,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ArtBanner.tsx",
-                        lineNumber: 10,
+                        lineNumber: 12,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "lg:w-1/2 text-center lg:text-left",
+                        className: "max-w-2xl",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-4xl font-bold text-[#4C3F39] mb-6 leading-tight",
+                                children: [
+                                    "Jewelry That ",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                        fileName: "[project]/src/components/ArtBanner.tsx",
+                                        lineNumber: 28,
+                                        columnNumber: 28
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[#6A554A]",
+                                        children: "Celebrates You"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/ArtBanner.tsx",
+                                        lineNumber: 29,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/ArtBanner.tsx",
+                                lineNumber: 27,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-xl text-[#6A554A] mb-8 leading-relaxed",
+                                children: "Discover pieces designed to highlight your beauty and boost your confidence. Because every moment deserves a touch of elegance."
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ArtBanner.tsx",
+                                lineNumber: 32,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "bg-[#B48F76] hover:bg-[#8C7468] text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg",
+                                children: "Find Your Perfect Piece"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ArtBanner.tsx",
+                                lineNumber: 37,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/ArtBanner.tsx",
+                        lineNumber: 26,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-10 flex justify-center lg:hidden",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-8 shadow-lg border border-pink-100",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-4xl font-bold text-pink-800 mb-6",
-                                    children: [
-                                        "Jewelry That",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                            fileName: "[project]/src/components/ArtBanner.tsx",
-                                            lineNumber: 27,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-rose-600",
-                                            children: "Celebrates You"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/ArtBanner.tsx",
-                                            lineNumber: 28,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/ArtBanner.tsx",
-                                    lineNumber: 26,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-xl text-gray-700 mb-8 leading-relaxed",
-                                    children: "Discover pieces designed to highlight your beauty and boost your confidence. Because every moment deserves a touch of elegance."
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ArtBanner.tsx",
-                                    lineNumber: 31,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-3 rounded-full font-semibold hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-xl",
-                                    children: "Find Your Perfect Piece"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ArtBanner.tsx",
-                                    lineNumber: 36,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            className: "w-56 h-56 rounded-full overflow-hidden shadow-lg border-4 border-[#F7F3EF]",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                src: "/images/artbanner.jpeg",
+                                alt: "Elegant jewelry collection",
+                                width: 300,
+                                height: 300,
+                                className: "w-full h-full object-cover"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ArtBanner.tsx",
+                                lineNumber: 45,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
                             fileName: "[project]/src/components/ArtBanner.tsx",
-                            lineNumber: 25,
+                            lineNumber: 44,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ArtBanner.tsx",
-                        lineNumber: 24,
+                        lineNumber: 43,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ArtBanner.tsx",
                 lineNumber: 8,
-                columnNumber: 9
+                columnNumber: 5
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ArtBanner.tsx",
             lineNumber: 7,
-            columnNumber: 7
+            columnNumber: 3
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ArtBanner.tsx",
